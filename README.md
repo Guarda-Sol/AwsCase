@@ -3,6 +3,9 @@
 
 Bem-vindo ao repositório `AwsCase`. Este projeto faz parte de um estudo de caso para uma aula de DevOps e consiste na construção de 4 aplicações usando Django (Python), NodeJs (JavaScript), Spring Boot (Java). As aplicações são servidas por um servidor Nginx. Além disso, temos uma instância do Wordpress que está sendo gerenciada por outro Nginx com um balanceador de carga usando 2 instâncias do Lightsail e seu próprio balanceador de carga.
 
+![Description of the Image](mermaid-diagram-2023-08-23-223656.png)
+
+
 ## Pré-requisitos
 
 Antes de começar a executar o projeto, é necessário:
