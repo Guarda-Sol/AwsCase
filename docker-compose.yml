@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  nodejs:
+    build:
+      context: ./NodeJs
+      dockerfile: Dockerfile
+    expose:
+      - "3000"
+    networks:
+      - main-network
+
+  django:
+    build:
+      context: ./django_aws_image
+      dockerfile: Dockerfile
+    expose:
+      - "8000"
+    networks:
+      - main-network
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./certs:/etc/letsencrypt 
+    depends_on:
+      - nodejs
+      - django
+    networks:
+      - main-network
+  java:
+    build:
+      context: ./java
+      dockerfile: Dockerfile  
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_URL
+      - DB_USER
+      - DB_PASSWORD
+      - DB_NAME
+    networks:
+      - main-network
+
+networks:
+  main-network:
+    driver: bridge
