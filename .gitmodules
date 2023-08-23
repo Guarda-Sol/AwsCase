@@ -1,0 +1,15 @@
+[submodule "nginx"]
+	path = nginx
+	url = https://github.com/Guarda-Sol/nginx.git
+[submodule "java"]
+	path = java
+	url = https://github.com/Guarda-Sol/java.git
+[submodule "wordpress"]
+	path = wordpress
+	url = https://github.com/Guarda-Sol/wordpress.git
+[submodule "django"]
+	path = django
+	url = https://github.com/Guarda-Sol/django.git
+[submodule "nodejs"]
+	path = nodejs
+	url = https://github.com/Guarda-Sol/nodejs.git
