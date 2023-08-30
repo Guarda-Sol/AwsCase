@@ -27,7 +27,7 @@ Antes de começar a executar o projeto, é necessário:
    ```
    Exemplo de como escrever no arquivo: `DB_URL=YOUR_URL`. Não é necessário encapsular suas variáveis com aspas.
 
-5. Agora, navegue pelos repositórios dos submódulos e leia suas instruções. Quando terminar de configurar tudo é só escutar o comando em uma instância EC2:
+5. Agora, navegue pelos repositórios dos submódulos e leia suas instruções. Quando terminar de configurar tudo é só executar o comando em uma instância EC2:
 
 ```
   sudo docker-compose up --build
